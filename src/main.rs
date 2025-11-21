@@ -1,8 +1,11 @@
+mod utils;
 mod shell;
 
+use clap::Parser;
+use utils::args::Args;
 use shell::repl;
 
 fn main() {
-    println!("Hello, world!");
+    let _args= Args::parse(); // Arguments parsing
     repl::run();
 }
